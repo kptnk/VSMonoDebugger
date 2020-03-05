@@ -10,6 +10,7 @@ namespace VSMonoDebugger.Settings
     public struct VSMonoDebuggerProjectSettings
     {
         public string SSHDeployPath;
+        public int SSHMonoDebugPort;
 
         public string WindowsDeployPath;
 

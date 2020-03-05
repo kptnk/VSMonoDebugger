@@ -276,6 +276,11 @@ namespace VSMonoDebugger
                             Logger.Info($"SSHDeployPath = {settings.SSHDeployPath} was overwritten with local *.VSMonoDebugger.config: {localProjectConfig.Value.SSHDeployPath}");
                             settings.SSHDeployPath = localProjectConfig.Value.SSHDeployPath;
                         }
+                        if (localProjectConfig.Value.SSHMonoDebugPort > 0)
+                        {
+                            Logger.Info($"SSHMonoDebugPort = {settings.SSHMonoDebugPort} was overwritten with local *.VSMonoDebugger.config: {localProjectConfig.Value.SSHMonoDebugPort}");
+                            settings.SSHMonoDebugPort = localProjectConfig.Value.SSHMonoDebugPort;
+                        }
                         if (!string.IsNullOrWhiteSpace(localProjectConfig.Value.WindowsDeployPath))
                         {
                             Logger.Info($"WindowsDeployPath = {settings.WindowsDeployPath} was overwritten with local *.VSMonoDebugger.config: {localProjectConfig.Value.WindowsDeployPath}");
